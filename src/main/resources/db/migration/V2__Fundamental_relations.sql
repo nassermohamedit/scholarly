@@ -30,7 +30,7 @@ CREATE TABLE posts (
     number_of_comments INT DEFAULT 0,
     created_on TIMESTAMP,
     CONSTRAINT fk_topic FOREIGN KEY(topic_id) REFERENCES topics(id),
-    CONSTRAINT fk_author FOREIGN KEY(author_id) REFERENCES users(id)
+    CONSTRAINT fk_author FOREIGN KEY(author_id) REFERENCES profiles(id)
 );
 
 -- comments table
@@ -41,5 +41,5 @@ CREATE TABLE comments (
     author_id INT NOT NULL,
     created_on TIMESTAMP,
     CONSTRAINT fk_post FOREIGN KEY(post_id) REFERENCES posts(id),
-    CONSTRAINT fk_comment_author FOREIGN KEY(author_id) REFERENCES users(id)
+    CONSTRAINT fk_comment_author FOREIGN KEY(author_id) REFERENCES profiles(id)
 );

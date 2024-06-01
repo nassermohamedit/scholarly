@@ -7,19 +7,15 @@ public enum Gender {
     FEMALE(2),
     NOT_APPLICABLE(9);
 
-    private final int code;
+    public final int code;
 
     Gender(int code) {
         this.code = code;
     }
 
-    public int getCode() {
-        return code;
-    }
-
     public static Gender fromCode(int code) {
-        for (Gender gender : Gender.values()) {
-            if (gender.getCode() == code) {
+        for (Gender gender : values()) {
+            if (gender.code == code) {
                 return gender;
             }
         }

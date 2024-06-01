@@ -13,7 +13,7 @@ public class GenderConverter implements AttributeConverter<Gender, Integer> {
         if (gender == null) {
             return null;
         }
-        return gender.getCode();
+        return gender.code;
     }
 
     @Override
