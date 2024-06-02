@@ -5,7 +5,7 @@ target/
 !**/src/test/**/target/
 
 /certs
-.env
+.env.sh
 
 ### STS ###
 .apt_generated
