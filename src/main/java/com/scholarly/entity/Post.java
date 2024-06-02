@@ -20,7 +20,7 @@ public class Post {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     private String content;
 
@@ -30,11 +30,11 @@ public class Post {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "author_id")
-    private User author;
+    private Profile author;
 
-    private int ups = 0;
+    private long ups = 0;
 
-    private int downs = 0;
+    private long downs = 0;
 
     @OneToMany(mappedBy="post", fetch = FetchType.LAZY)
     private List<Comment> comments;

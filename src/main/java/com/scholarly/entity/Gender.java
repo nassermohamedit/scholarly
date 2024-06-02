@@ -2,18 +2,18 @@ package com.scholarly.entity;
 
 public enum Gender {
 
-    NOT_KNOWN(0),
-    MALE(1),
-    FEMALE(2),
-    NOT_APPLICABLE(9);
+    NOT_KNOWN((short) 0),
+    MALE((short) 1),
+    FEMALE((short) 2),
+    NOT_APPLICABLE((short) 9);
 
-    public final int code;
+    public final short code;
 
-    Gender(int code) {
+    Gender(short code) {
         this.code = code;
     }
 
-    public static Gender fromCode(int code) {
+    public static Gender fromCode(short code) {
         for (Gender gender : values()) {
             if (gender.code == code) {
                 return gender;

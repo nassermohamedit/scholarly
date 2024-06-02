@@ -20,7 +20,6 @@ public class Membership {
     @Convert(converter = MembershipPowerConverter.class)
     private Power power;
 
-
     public enum Power {
 
         NONE(1),
@@ -29,13 +28,13 @@ public class Membership {
         MODERATOR(8),
         OWNER(16);
 
-        public final int code;
+        public final short code;
 
         Power(int code) {
-            this.code = code;
+            this.code = (short) code;
         }
 
-        public static Power fromCode(int code) {
+        public static Power fromCode(short code) {
             for (Power power: values()) {
                 if (power.code == code) {
                     return power;

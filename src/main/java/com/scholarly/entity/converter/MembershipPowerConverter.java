@@ -5,10 +5,10 @@ import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
 
 @Converter(autoApply = true)
-public class MembershipPowerConverter implements AttributeConverter<Membership.Power, Integer> {
+public class MembershipPowerConverter implements AttributeConverter<Membership.Power, Short> {
 
     @Override
-    public Integer convertToDatabaseColumn(Membership.Power power) {
+    public Short convertToDatabaseColumn(Membership.Power power) {
         if (power == null) {
             return null;
         }
@@ -16,7 +16,7 @@ public class MembershipPowerConverter implements AttributeConverter<Membership.P
     }
 
     @Override
-    public Membership.Power convertToEntityAttribute(Integer code) {
+    public Membership.Power convertToEntityAttribute(Short code) {
         if (code == null) {
             return null;
         }

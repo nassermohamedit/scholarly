@@ -15,6 +15,6 @@ public class WelcomeController {
 
     @GetMapping
     public String welcome() {
-        return "Welcome to Scholarly";
+        return "Welcome to Scholarly!!";
     }
 }

@@ -6,10 +6,10 @@ import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
 
 @Converter(autoApply = true)
-public class GenderConverter implements AttributeConverter<Gender, Integer> {
+public class GenderConverter implements AttributeConverter<Gender, Short> {
 
     @Override
-    public Integer convertToDatabaseColumn(Gender gender) {
+    public Short convertToDatabaseColumn(Gender gender) {
         if (gender == null) {
             return null;
         }
@@ -17,7 +17,7 @@ public class GenderConverter implements AttributeConverter<Gender, Integer> {
     }
 
     @Override
-    public Gender convertToEntityAttribute(Integer code) {
+    public Gender convertToEntityAttribute(Short code) {
         if (code == null) {
             return null;
         }

@@ -1,15 +1,22 @@
 package com.scholarly.entity;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ProfileTopicId {
+@Embeddable
+public class ProfileTopicId implements Serializable {
 
-    private Profile profile;
+    @Column(name = "profile_id")
+    private Long profileId;
 
-    private Topic topic;
+    @Column(name = "topic_id")
+    private Long topicId;
 }
