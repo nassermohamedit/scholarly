@@ -16,5 +16,5 @@ import lombok.NoArgsConstructor;
 public class JoinRequest {
 
     @EmbeddedId
-    private ProfileTopicId id;
+    private UserTopicId id;
 }

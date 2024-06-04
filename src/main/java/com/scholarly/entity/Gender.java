@@ -1,5 +1,7 @@
 package com.scholarly.entity;
 
+import com.fasterxml.jackson.annotation.JsonValue;
+
 public enum Gender {
 
     NOT_KNOWN((short) 0),
@@ -22,5 +24,9 @@ public enum Gender {
         throw new IllegalArgumentException("Invalid gender code: " + code);
     }
 
-
+    @JsonValue
+    @Override
+    public String toString() {
+        return name().toLowerCase();
+    }
 }

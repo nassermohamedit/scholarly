@@ -26,7 +26,7 @@ public class Comment {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "author_id", nullable = false)
-    private Profile author;
+    private User author;
 
     @Column(name = "created_on")
     private LocalDateTime createdOn;

@@ -30,7 +30,7 @@ public class Post {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "author_id")
-    private Profile author;
+    private User author;
 
     private long ups = 0;
 

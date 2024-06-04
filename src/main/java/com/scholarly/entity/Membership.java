@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 public class Membership {
 
     @EmbeddedId
-    private ProfileTopicId id;
+    private UserTopicId id;
 
     @Convert(converter = MembershipPowerConverter.class)
     private Power power;
