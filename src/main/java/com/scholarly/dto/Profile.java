@@ -7,6 +7,7 @@ public record Profile(
         String username,
         String firstname,
         String lastname,
+        String email,
         Gender gender,
         String country) {
 }

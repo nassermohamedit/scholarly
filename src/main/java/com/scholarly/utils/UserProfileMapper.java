@@ -14,6 +14,7 @@ public class UserProfileMapper implements DataMapper<User, Profile> {
                 data.getUsername(),
                 data.getFirstname(),
                 data.getLastname(),
+                data.getEmail(),
                 data.getGender(),
                 data.getCountry()
         );
